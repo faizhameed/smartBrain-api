@@ -40,6 +40,6 @@ bcrypt.hash("bacon", null, null, function(err, hash) {
     // Store hash in your password DB.
 });
 
-app.listen(3000,()=>{
-	console.log('app is running @ 3000')
+app.listen(process.env.PORT || 3000,()=>{
+	console.log(`app is running @ ${process.env.PORT}`)
 })
